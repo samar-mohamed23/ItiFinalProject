@@ -1,0 +1,15 @@
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+@import "./src/styles/settings";
+@import "./src/styles/generic";
+@import "./src/styles/base";
+@import "./src/styles/objects";
+@import "./src/styles/components";
+@import "./src/styles/mediaQuery";
+
+$myColor: red;
+
+h1 {
+  color: $myColor;
+}

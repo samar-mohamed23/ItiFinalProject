@@ -1,0 +1,23 @@
+// media query
+@media (min-width: 768px) {
+  .navbar-expand-md {
+    .navbar-collapse {
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar-nav {
+      .nav-link {
+        padding: 30px 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+}
