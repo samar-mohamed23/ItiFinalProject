@@ -2,6 +2,7 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 25px;
+
   &.bg-main-light {
     background-color: rgba(38, 151, 90, 0.11);
   }
@@ -13,7 +14,7 @@
   caret-color: $main-color;
   position: relative;
   direction: initial;
-  text-align: right;
+  text-align: left;
   border-radius: $radius;
   height: 52px;
   padding-right: 15px;
@@ -24,18 +25,19 @@
   background-color: $white-color;
 
   &::placeholder {
-    color: $dark-color;
+    color: $font-color;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   &:hover,
   &:focus {
     outline: unset;
-    box-shadow: unset;
+    @extend %shadow;
   }
+
   &:focus {
-    border-color: $main-color;
+    border-color: $dark-color;
   }
 }
 
@@ -44,6 +46,7 @@ textarea {
     height: 103px;
     resize: inherit;
     direction: inherit;
+
     &::placeholder {
       color: $dark-color;
       direction: inherit;
@@ -53,8 +56,9 @@ textarea {
       outline: inherit;
       box-shadow: none;
     }
+
     &:focus {
-      border-color: $black-color;
+      border-color: $dark-color;
     }
   }
 }
@@ -68,16 +72,15 @@ textarea {
   padding-right: 15px;
   background-position: center left calc(0.375em + 0.1875rem);
 }
+
 .custom-select.is-valid,
 .was-validated .custom-select:valid {
   border-color: #28a745;
   padding-right: 15px;
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
-      no-repeat left 2rem center/8px 10px,
-    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e")
-      #fff no-repeat center left 0.75rem / calc(0.75em + 0.375rem)
-      calc(0.75em + 0.375rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat left 2rem center/8px 10px,
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center left 0.75rem / calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
+
 .invalid-feedback {
   font-size: 13px;
   color: rgb(238, 62, 62);
@@ -88,8 +91,8 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-input[type="radio"] ~ label:before,
-input[type="radio"] ~ label:after {
+input[type="radio"]~label:before,
+input[type="radio"]~label:after {
   border-radius: 50%;
   overflow: hidden;
 }
@@ -110,23 +113,30 @@ input[type="radio"] ~ label:after {
 }
 
 .btn-main {
-  background-color: $main-color;
+  width: 35%;
+  text-align: center;
+  background-color: $second-color;
   color: $white-color;
   text-transform: uppercase;
-  @extend %shadow;
-  @extend %ease;
+  font-size: large;
+  padding: 2%;
+  border: 1px solid $second-color;
+  border-radius: $radius;
 
   &:hover,
   &:focus {
-    opacity: 1;
+    opacity: 0.80;
     color: $white-color;
     outline: none;
-    box-shadow: unset;
+    @extend %ease;
+    @extend %shadow;
+
   }
 }
 
 .btn-w-arrow {
   position: relative;
+
   &:after {
     content: "\f060";
     font-family: "Font Awesome 5 Free";
@@ -168,13 +178,17 @@ input[type="radio"] ~ label:after {
     background: $main-color;
     transition: all 0.6s ease;
   }
+
   &:before {
     top: 0;
   }
+
   &:after {
     bottom: 0;
   }
+
   &:hover {
+
     &:before,
     &:after {
       height: 0;
@@ -182,16 +196,19 @@ input[type="radio"] ~ label:after {
     }
   }
 }
+
 .btn-200 {
   padding: 16px 32px;
   width: 200px;
 }
+
 .btn-block {
   width: 100%;
   padding: 16px 32px;
 }
 
 a {
+
   &:hover,
   &:focus {
     @extend %ease;
@@ -206,31 +223,40 @@ a {
   position: relative;
   z-index: 1;
 }
+
 .content-w-half {
   width: 50%;
   margin: auto;
 }
+
 .w-radius {
   @extend %radius;
 }
+
 .text-start {
   text-align: start;
 }
+
 .mt-40 {
   margin-top: 40px;
 }
+
 .main-color {
   color: $main-color;
 }
+
 .bg-white {
   background-color: $white-color;
 }
+
 .bg-grey {
   background-color: #f9fafa;
 }
+
 .font-color {
   color: $font-color;
 }
+
 .text-underline {
   text-decoration: underline;
 }
@@ -238,12 +264,15 @@ a {
 .text-main {
   color: $main-color;
 }
+
 .text-black {
   color: $black-color;
 }
+
 .font-meduim {
   font-weight: 600;
 }
+
 .white-bg {
   background-color: $white-color;
 }
@@ -251,10 +280,12 @@ a {
 .grey-bg {
   background-color: $light-grey;
 }
+
 .center {
   text-align: center;
   display: block;
 }
+
 .card {
   padding: 20px;
   border: none;
@@ -267,6 +298,7 @@ a {
   &:not(:last-of-type) {
     margin-bottom: 20px;
   }
+
   .card-header {
     padding: 0 20px;
     margin-bottom: 0;
@@ -280,6 +312,7 @@ a {
       color: $black-color;
       margin-bottom: 10px;
     }
+
     h6 {
       font-size: 20px;
       color: $black-color;
@@ -305,19 +338,23 @@ a {
     margin-bottom: 0;
     text-transform: uppercase;
   }
+
   .card-img {
     padding: 0;
     height: 200px;
     max-height: 200px;
     border-radius: $radius;
     overflow: hidden;
+
     img {
       max-height: 100%;
       width: 100%;
     }
   }
+
   .card-body {
     color: $black-color;
+
     ul {
       li {
         font-size: 15px;
@@ -325,6 +362,7 @@ a {
         margin-bottom: 0px;
         position: relative;
         z-index: 1;
+
         &:not(:last-of-type) {
           margin-bottom: 10px;
         }
@@ -339,6 +377,7 @@ a {
           overflow: hidden;
           z-index: 2;
         }
+
         &:before {
           width: 7px;
           height: 7px;
@@ -346,6 +385,7 @@ a {
           top: 7.5px;
           background-color: $main-color;
         }
+
         &:after {
           width: 12px;
           height: 12px;
@@ -353,6 +393,7 @@ a {
         }
       }
     }
+
     .btn {
       padding: 8px 32px;
       margin: 20px auto 0;
@@ -370,15 +411,18 @@ a {
   font-weight: 500;
   color: $black-color;
 }
+
 /*dropdown*/
 li.w-submenu {
   position: relative;
+
   a {
     position: relative;
 
     &:before {
       display: none;
     }
+
     &:after {
       content: "";
       background-image: url("../../src/images/icons/down-arrow.png");
@@ -424,6 +468,7 @@ li.w-submenu {
       &:after {
         display: none;
       }
+
       & a {
         padding: 0px 8px;
         display: block;
@@ -437,6 +482,7 @@ li.w-submenu {
           color: $main-color;
           text-decoration: none;
         }
+
         &:before,
         &:after {
           display: none;
@@ -444,6 +490,7 @@ li.w-submenu {
       }
     }
   }
+
   &:hover {
     & .submenu {
       top: 100%;

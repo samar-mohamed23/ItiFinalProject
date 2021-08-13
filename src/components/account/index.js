@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Account extends React.Component {
   constructor(props) {
@@ -7,7 +8,17 @@ class Account extends React.Component {
     this.state = {};
   }
   render() {
-    return <h1>Account</h1>;
+    return (
+      <div className="p-5">
+        <div class="d-flex justify-content-center p-2">
+          <Link className="btn btn-main" to="/login">Login</Link>
+        </div>
+        <div class="d-flex justify-content-center p-2">
+          <Link className="btn btn-main" to="/signup">Register</Link>
+        </div>
+      </div>
+
+    );
   }
 }
 
