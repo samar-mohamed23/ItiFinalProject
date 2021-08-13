@@ -10,6 +10,8 @@ import Favourite from "./components/favourite";
 import Cart from "./components/cart";
 import About from "./components/about";
 import Notfound from "./components/error";
+import Login from "./components/login";
+import SignUp from "./components/signup";
 
 const App = () => {
   return (
@@ -23,6 +25,8 @@ const App = () => {
         <Route path="/Account" exact component={Account} />
         <Route path="/favourite" exact component={Favourite} />
         <Route path="/cart" exact component={Cart} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/signup" exact component={SignUp} />
         <Route path="*" exact component={Notfound} />
       </Switch>
     </Router>
