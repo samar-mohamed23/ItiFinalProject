@@ -135,7 +135,8 @@ body {
     -ms-flex-align: center;
     align-items: center;
     margin-right: 16px;
-    color: #c50505;
+    color:#c50505 ;
+
   }
 }
 
@@ -168,3 +169,36 @@ body {
   color: $second-color;
   cursor: pointer;
 }
+
+.product-remove  {
+  color: #c50505;
+  font-size: 25px;
+
+  &:hover{
+    color: black;
+    cursor: pointer;
+  }
+}
+
+.table-content {
+  
+  text-align: center;
+  margin: auto;
+  padding: auto;
+
+  
+}
+
+.table-product-view{
+  img{
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+  }
+  span{
+    font-weight: bold;
+    
+  }
+}
+
+td,th{vertical-align: middle}

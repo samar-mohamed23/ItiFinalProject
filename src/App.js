@@ -12,6 +12,7 @@ import About from "./components/about";
 import Notfound from "./components/error";
 import Login from "./components/login";
 import SignUp from "./components/signup";
+import Checkout from "./components/checkout";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/cart" exact component={Cart} />
         <Route path="/login" exact component={Login} />
         <Route path="/signup" exact component={SignUp} />
+        <Route path="/checkout" exact component={Checkout} />
         <Route path="*" exact component={Notfound} />
       </Switch>
     </Router>
