@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 class Checkout extends React.Component {
     render() {
         return (
@@ -121,7 +120,12 @@ class Checkout extends React.Component {
                         />
                     </div>
 
-                    <div class="d-flex justify-content-center ">
+                    <div className="form-container center">
+                        <span className="form-label">Total</span>
+                        <h2>$1200</h2>
+                    </div>
+
+                    <div class="d-flex justify-content-center m-2">
                         <Link className="btn-main" to="/">
                             Place Order
                         </Link>
