@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Counter from "../counter";
 
 class ShoppingCart extends React.Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class ShoppingCart extends React.Component {
                   <div>price</div>
                 </td>
                 <td className="table-content">
-                  <div>counter</div>
+                  <div><Counter /></div>
                 </td>
                 <td className="table-content">
                   <span>$42.00</span>
@@ -66,7 +67,7 @@ class ShoppingCart extends React.Component {
                   <div>price</div>
                 </td>
                 <td className="table-content">
-                  <div>counter</div>
+                  <div><Counter /></div>
                 </td>
                 <td className="table-content">
                   <span>$42.00</span>
