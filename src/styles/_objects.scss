@@ -115,12 +115,12 @@ input[type="radio"]~label:after {
 .btn-main {
   width: 50%;
   text-align: center;
-  background-color: $second-color;
+  background-color: #c50505;
   color: $white-color;
   text-transform: uppercase;
   font-size: large;
   padding: 2%;
-  border: 1px solid $second-color;
+  border: 1px solid #c50505;
   border-radius: $radius;
 
   &:hover,

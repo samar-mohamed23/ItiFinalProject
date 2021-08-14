@@ -30,15 +30,7 @@ class SignUp extends React.Component {
                             <input type="text" name="password" class="form-control mt-3" value="" onChange={() => { }} placeholder="Confirm Password" id="passwordConfirmation" />
                         </div>
 
-                        <div class="mb-3">
-                            <label className="form-label" for="phoneNo">Phone NO.:</label>
-                            <input type="text" name="phoneNo" class="form-control" value="" onChange={() => { }} placeholder="01*********" id="phoneNo" />
-                        </div>
 
-                        <div class="mb-3">
-                            <label className="form-label" for="address">Address:</label>
-                            <input type="text" name="address" class="form-control" value="" onChange={() => { }} placeholder="BlockNo - St. - State - Governorate." id="address" />
-                        </div>
 
 
 
