@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class ShoppingCart extends React.Component {
   constructor(props) {
@@ -9,49 +10,84 @@ class ShoppingCart extends React.Component {
   render() {
     return (
       <>
-        <table>
-          <tr className="single-product-wrapper">
-            <td><h5>Remove</h5></td>
-            <td><h5>Product</h5></td>
-            <td><h5>Name</h5></td>
-            <td><h5>Price</h5></td>
-            <td><h5>Quantity</h5></td>
-            <td><h5>SubTotal</h5></td>
-          </tr>
-          <tr className="single-product-wrapper">
-            <td>
-              <div>x</div>
-            </td>
-            <td>
-              <div class="card-image">
-                <img src="/static/media/01.324b25fe.jpg" alt="product name" />
-              </div>
-            </td>
-            <td>
-              <div>
-                product name
-              </div>
+        <div className="table-responsive table-hover ">
+          <table className="table ">
+            <thead className="m-3">
+              <tr>
+                <th scope="col" className="table-content">
+                  Remove
+                </th>
+                <th scope="col" className="table-content">
+                  Product
+                </th>
+                <th scope="col" className="table-content">
+                  Price
+                </th>
+                <th scope="col" className="table-content">
+                  Quantity
+                </th>
+                <th scope="col" className="table-content">
+                  SubTotal
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="m-3">
+                <td className="table-content">
+                  <div className="product-remove">x</div>
+                </td>
+                <td className="table-content">
+                  <div className="table-product-view">
+                    <img src="/static/media/01.324b25fe.jpg" alt="product name" />
+                    <span>product name</span>
+                  </div>
+                </td>
+                <td className="table-content">
+                  <div>price</div>
+                </td>
+                <td className="table-content">
+                  <div>counter</div>
+                </td>
+                <td className="table-content">
+                  <span>$42.00</span>
+                </td>
+              </tr>
+              <tr className="m-3">
+                <td className="table-content">
+                  <div className=" table-content product-remove">x</div>
+                </td>
+                <td className="table-content">
+                  <div className="table-product-view">
+                    <img src="/static/media/01.324b25fe.jpg" alt="product name" />
+                    <span>product name</span>
+                  </div>
+                </td>
+                <td className="table-content">
+                  <div>price</div>
+                </td>
+                <td className="table-content">
+                  <div>counter</div>
+                </td>
+                <td className="table-content">
+                  <span>$42.00</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-            </td>
-            <td>
-              <div>
-                price
-              </div>
-            </td>
-            <td>
-              <div>
-                counter
-              </div>
-            </td>
-            <td>
-              <span>
-                1 × <span>$</span>42.00
-              </span>
-            </td>
-          </tr>
+        <div className="form-container center">
+          <span className="form-label">Total</span>
+          <h2>$1200</h2>
 
-        </table>
+          <div class="d-flex justify-content-center p-2">
+            <Link className="btn btn-main" to="/checkout">To Checkout &gt;&gt; </Link>
+          </div>
+
+
+        </div>
       </>
+
     );
   }
 }
