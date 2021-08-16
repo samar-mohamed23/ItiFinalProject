@@ -24,7 +24,6 @@ class Footer extends React.Component {
                     </div>
                     <p class="para"><span class=" mr-3 fa fa-map-marker"></span>59 Street,NewYork City,Rose Town,05 Rive House</p>
                     <p class="para"><span class="mr-3 fa fa-phone"></span>+012 345 67890</p>
-                    <p class="para"><span class="mr-3 fa fa-envelope"></span>info@example.com</p>
                 </div>
                 <div class=" flink col-12 col-md-3">
                     <h4>Information</h4>
